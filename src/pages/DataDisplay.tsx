@@ -27,8 +27,6 @@ import dell from "../assets/dell.png";
 import hp from "../assets/hp.png";
 import lenovo from "../assets/lenovo.png";
 import { deepOrange, deepPurple } from "@mui/material/colors";
-<<<<<<< HEAD
-=======
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -54,7 +52,6 @@ const rows = [
   createData("Cupcake", 305, 3.7, 67, 4.3),
   createData("Gingerbread", 356, 16.0, 49, 3.9),
 ];
->>>>>>> ab99db736f437f571d6c3be229916614ddd7ce35
 
 function DataDisplay() {
   const [checked, setChecked] = React.useState(["wifi"]);
@@ -285,48 +282,44 @@ function DataDisplay() {
         </ListItem>
         <Divider variant="inset" component="li" />
       </List>
-
-<<<<<<< HEAD
-
-       <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-      subheader={<ListSubheader>Settings</ListSubheader>}
-    >
-      <ListItem>
-        <ListItemIcon>
-          <WifiIcon />
-        </ListItemIcon>
-        <ListItemText id="switch-list-label-wifi" primary="Wi-Fi" />
-        <Switch
-          edge="end"
-          onChange={handleToggle('wifi')}
-          checked={checked.includes('wifi')}
-          inputProps={{
-            'aria-labelledby': 'switch-list-label-wifi',
-          }}
-        />
-      </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <BluetoothIcon />
-        </ListItemIcon>
-        <ListItemText id="switch-list-label-bluetooth" primary="Bluetooth" />
-        <Switch
-          edge="end"
-          onChange={handleToggle('bluetooth')}
-          checked={checked.includes('bluetooth')}
-          inputProps={{
-            'aria-labelledby': 'switch-list-label-bluetooth',
-          }}
-        />
-      </ListItem>
-    </List>
-=======
       <List
         sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
         subheader={<ListSubheader>Settings</ListSubheader>}
       >
-        <ListItem> 
+        <ListItem>
+          <ListItemIcon>
+            <WifiIcon />
+          </ListItemIcon>
+          <ListItemText id="switch-list-label-wifi" primary="Wi-Fi" />
+          <Switch
+            edge="end"
+            onChange={handleToggle("wifi")}
+            checked={checked.includes("wifi")}
+            inputProps={{
+              "aria-labelledby": "switch-list-label-wifi",
+            }}
+          />
+        </ListItem>
+        <ListItem>
+          <ListItemIcon>
+            <BluetoothIcon />
+          </ListItemIcon>
+          <ListItemText id="switch-list-label-bluetooth" primary="Bluetooth" />
+          <Switch
+            edge="end"
+            onChange={handleToggle("bluetooth")}
+            checked={checked.includes("bluetooth")}
+            inputProps={{
+              "aria-labelledby": "switch-list-label-bluetooth",
+            }}
+          />
+        </ListItem>
+      </List>
+      <List
+        sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+        subheader={<ListSubheader>Settings</ListSubheader>}
+      >
+        <ListItem>
           <ListItemIcon>
             <WifiIcon />
           </ListItemIcon>
@@ -356,36 +349,35 @@ function DataDisplay() {
         </ListItem>
       </List>
 
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <TableHead>
+            <TableRow>
+              <TableCell>Dessert (100g serving)</TableCell>
+              <TableCell align="right">Calories</TableCell>
+              <TableCell align="right">Fat&nbsp;(g)</TableCell>
+              <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+              <TableCell align="right">Protein&nbsp;(g)</TableCell>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
->>>>>>> ab99db736f437f571d6c3be229916614ddd7ce35
+          </TableHead>
+          <TableBody>
+            {rows.map((row) => (
+              <TableRow
+                key={row.name}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="right">{row.calories}</TableCell>
+                <TableCell align="right">{row.fat}</TableCell>
+                <TableCell align="right">{row.carbs}</TableCell>
+                <TableCell align="right">{row.protein}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }
