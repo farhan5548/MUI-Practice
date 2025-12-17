@@ -1,17 +1,17 @@
 import "./App.css";
-import DataDisplay from "./pages/DataDisplay";
-import Feedback from "./pages/Feedback";
-import Input from "./pages/Input";
-import Layout from "./pages/Layout";
+// import DataDisplay from "./pages/DataDisplay";
+// import Feedback from "./pages/Feedback";
+// import Input from "./pages/Input";
+// import Layout from "./pages/Layout";
 import Sample from "./pages/Sample";
 function App() {
   return (
     <>
       <Sample />
-      <Input />
+      {/* <Input />
       <Layout />
       <DataDisplay />
-      <Feedback />
+      <Feedback /> */}
     </>
   );
 }
